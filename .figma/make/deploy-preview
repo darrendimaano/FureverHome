@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+VITE_OAUTH_REDIRECT_URI="${FIGMA_PREVIEW_OAUTH_REDIRECT_URI:-}" pnpm run build
+exec figma make deploy-preview --build-dir dist

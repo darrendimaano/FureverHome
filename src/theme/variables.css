@@ -1,0 +1,130 @@
+:root {
+  --ion-font-family: "Inter", "Segoe UI", sans-serif;
+  --ion-color-primary: #d9612b;
+  --ion-color-primary-rgb: 217, 97, 43;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-shade: #bf5526;
+  --ion-color-primary-tint: #dd7140;
+  --ion-color-secondary: #5c3b2e;
+  --ion-color-secondary-rgb: 92, 59, 46;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-shade: #513429;
+  --ion-color-secondary-tint: #6c4f43;
+  --ion-color-tertiary: #6d8b63;
+  --ion-color-tertiary-rgb: 109, 139, 99;
+  --ion-color-tertiary-contrast: #ffffff;
+  --ion-background-color: #fffdf9;
+  --ion-text-color: #2f2622;
+  --cream: #f8f1e7;
+  --cream-deep: #f0e4d4;
+  --ink-muted: #746760;
+  --border: #e6ddd5;
+  --success-soft: #e6f1e2;
+  --shadow: 0 16px 50px rgba(76, 48, 37, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--ion-background-color);
+}
+
+ion-content {
+  --background: var(--ion-background-color);
+}
+
+.container {
+  width: min(1180px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: 76px;
+}
+
+.eyebrow {
+  color: var(--ion-color-primary);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  margin: 8px 0 12px;
+  color: var(--ion-color-secondary);
+  font-family: Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  line-height: 1.08;
+}
+
+.lead {
+  color: var(--ink-muted);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.surface {
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 10px 35px rgba(76, 48, 37, 0.06);
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
+  background: var(--success-soft);
+  color: #3f6237;
+  padding: 7px 11px;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+ion-button {
+  --border-radius: 12px;
+  font-weight: 750;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+ion-card {
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: none;
+}
+
+ion-input,
+ion-select,
+ion-textarea {
+  --background: #ffffff;
+  --border-radius: 12px;
+}
+
+@media (max-width: 820px) {
+  .container {
+    width: min(100% - 28px, 680px);
+  }
+
+  .section {
+    padding-block: 54px;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}

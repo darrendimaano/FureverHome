@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+export VITE_OAUTH_REDIRECT_URI="${FIGMA_PREVIEW_OAUTH_REDIRECT_URI:-}"
+exec pnpm exec vite --port "$PORT" --host
